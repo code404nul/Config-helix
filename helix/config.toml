@@ -1,0 +1,70 @@
+theme = "catppuccin_mocha"
+
+[editor]
+true-color = true
+line-number = "relative"
+cursorline = true
+color-modes = true
+*bufferline = "multiple"
+rulers = [100]
+scrolloff = 8
+mouse = true
+auto-pairs = true
+completion-trigger-len = 1
+idle-timeout = 50
+popup-border = "all"
+auto-info = true
+end-of-line-diagnostics = "hint"
+default-line-ending = "lf"
+
+[editor.cursor-shape]
+normal = "block"
+insert = "bar"
+select = "underline"
+
+[editor.statusline]
+left = ["mode", "spinner", "version-control", "file-name", "read-only-indicator", "file-modification-indicator"]
+center = []
+right = ["diagnostics", "selections", "register", "position", "total-line-numbers", "file-encoding", "file-type"]
+separator = "│"
+mode.normal = "NORMAL"
+mode.insert = "INSERT"
+mode.select = "SELECT"
+
+[editor.lsp]
+display-messages = true
+display-inlay-hints = true
+auto-signature-help = true
+
+[editor.inline-diagnostics]
+cursor-line = "warning"
+
+[editor.indent-guides]
+render = true
+character = "▏"
+skip-levels = 1
+
+[editor.whitespace.render]
+tab = "all"
+nbsp = "all"
+
+[editor.whitespace.characters]
+tab = "→"
+nbsp = "⍽"
+
+[editor.file-picker]
+hidden = false
+git-ignore = true
+
+[editor.auto-save]
+focus-lost = true
+
+[keys.normal]
+C-s = ":write"
+esc = ["collapse_selection", "keep_primary_selection"]
+
+[keys.insert]
+C-s = ["normal_mode", ":write"]
+
+[keys.select]
+C-s = ["normal_mode", ":write"]
